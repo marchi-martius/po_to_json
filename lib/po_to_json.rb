@@ -59,9 +59,7 @@ class PoToJson
     @options = parse_options(overwrite.merge(language: language))
     @parsed ||= inject_meta(parse_document)
 
-    generated = build_json_for(build_json_for(@parsed))
-
-    fail "Not implemented yet, current value is #{generated}!"
+    build_json_for(@parsed)
   end
 
   def parse_document
